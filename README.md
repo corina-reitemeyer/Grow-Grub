@@ -54,20 +54,25 @@ Inspired by the increasing trend of urban gardening and the growing interest in 
 - **Community and Tips**: Connect with a community of fellow gardeners to share tips, advice, and success stories. Get inspired by others' gardens and learn new techniques.
 
 
-## Getting Started
+---
 
-Instructions on setting up your project locally.
+## Setup
 
-### Prerequisites
+Run the following commands in your terminal:
 
-List any software, libraries, or tools that must be installed before running the project.
-
-### Installation
-
-Step-by-step guide on how to install and set up the environment. 
-
-```bash
-# Example installation steps
-git clone https://github.com/username/repository.git
-cd repository
+```sh
 npm install
+npm run knex migrate:latest
+npm run knex seed:run
+cp .env.example .env
+```
+
+To run in development:
+```sh
+npm run dev
+```
+
+To run in production:
+```sh
+npm start
+```
